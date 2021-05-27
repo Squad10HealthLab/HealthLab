@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Clínica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-purple">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center p-3">
+        <h2>Ficha Clínica</h2>
+    </div>
+    <section class="p-3 section-formulario shadow rounded">
+        <div class="d-flex justify-content-center">
+            <p>Complete a ficha clínica abaixo:</p>
+        </div>
+        <div class="formulario p-4">
+            <form role="form">
+                <div class="form-group">
+                    <label for="nome">
+                        Nome Completo
+                    </label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="estado-civil">Estado Civil</label>
+                        <select class="form-control" id="estado-civil">
+                            <option value="">Selecione</option>
+                            <option value="0">Solteiro</option>
+                            <option value="1">Casado</option>
+                            <option value="2">Separado</option>
+                            <option value="3">Divorciado</option>
+                            <option value="4">Viúvo</option>
+                            <option value="5">Amasiado</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-md-3">
+                        <label for="filhos">Possuí filhos ?</label>
+                        <select class="form-control" id="filhos">
+                            <option value="">Selecione</option>
+                            <option value="0">Não</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">Acima de 5</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-md-3">
+                        <label for="sexo">Sexo</label>
+                        <select class="form-control" id="sexo">
+                            <option value="">Selecione</option>
+                            <option value="0">Masculino</option>
+                            <option value="1">Feminino</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-md-3">
+                        <label for=data-nacimento">Data Nacimento</label>
+                        <input type="text" maxlength="10" class="form-control js-date" id="data-nacimento">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-1">
+                        <label for="altura">Altura</label>
+                        <input type="text" maxlength="3" onkeypress="return somenteNumero(event)"
+                            class="form-control input-medidas" id="altura" placeholder="cm">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="peso">Peso</label>
+                        <input type="text" maxlength="3" onkeypress="return somenteNumero(event)"
+                            class="form-control input-medidas" id="peso" placeholder="kg">
+                    </div>
+                    <div class="col-md-10">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="espacamento-label">Sofreu acidente de trabalho?</label>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="acidenteTrabalhoSim" name="acidenteTrabalho" value="Sim">
+                            <label for="acidenteTrabalhoSim">Sim</label>
+                            <input type="radio" id="acidenteTrabalhoNao" name="acidenteTrabalho" value="Não">
+                            <label for="acidenteTrabalhoNao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="espacamento-label">Afastamento pelo INSS?</label>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="afastamentoInssSim" name="afastamentoInss" value="Sim">
+                            <label for="afastamentoInssSim">Sim</label>
+                            <input type="radio" id="afastamentoInssNao" name="afastamentoInss" value="Não">
+                            <label for="afastamentoInssNao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="espacamento-label">Modalidade de trabalho?</label>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="modalidadeRemoto" name="modalidade" value="Sim">
+                            <label for="modalidadeRemoto">Remoto</label>
+                            <input type="radio" id="modalidadePresencial" name="modalidade" value="Não">
+                            <label for="modalidadePresencial">Presencial</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="doencas-cronicas">Possui doenças crônicas? Caso sim, quais?</label>
+                        <div>
+                            <textarea id="doencas-cronicas" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="ergonomia">Ergonomia</label>
+                        <div>
+                            <textarea id="ergonomia" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="conservacao-voz">Conservação da voz do docente</label>
+                        <div>
+                            <textarea id="conservacao-voz" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="doencas-ocupacionais">Doenças ocupacionais</label>
+                        <div>
+                            <textarea id="doencas-ocupacionais" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center p-3">
+                    <button class="col-2 btn enviar bg-purple text-light">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="footer sticky-bottom"></div>
+    <script src="js/funcoes.js"></script>
+</body>
+
+</html>
