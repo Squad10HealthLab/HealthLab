@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/global.css">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-purple">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">LOGO</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="d-flex justify-content-center p-3">
+      <h2>Aplicação de Exames Complementares</h2>
+    </div>
+    <section class="p-3 section-formulario shadow rounded">
+      <div class="formulario p-4">
+        <form role="form">
+          <div class="form-group">
+            <label for="colaborador">
+            Colaborador
+            </label>
+            <input type="text" class="form-control" id="colaborador">
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="cargo">Cargo</label>
+              <select class="form-control" id="cargo" onchange="atribuirRisco(event)">
+                <option value="">Selecione o cargo</option>
+                <option value="Gerente de Projetos">Desenvolvedor</option>
+                <option value="Analista de Sistemas">Analista de Sistemas</option>
+                <option value="Operador de Máquinas">Operador de Máquinas</option>
+                <option value="Operador de Máquinas">Cientista de Dados</option>
+              </select>
+            </div>
+            <br>
+            <div class="col-md-6">
+              <label for="funcao">Função</label>
+              <select class="form-control" id="funcao" onchange="atribuirRisco(event)">
+                <option value="">Selecione a função</option>
+                <option value="Desenvolver Software">Desenvolver Software</option>
+                <option value="Gerência de Equipe">Gerência de Equipe</option>
+                <option value="Operar máquinas industriais">Operar máquinas industriais</option>
+                <option value="Analisar Dados e Tendências">Analisar Dados e Tendências</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="unidade">Unidade</label>
+              <select class="form-control" id="unidade" onchange="atribuirRisco(event)">
+                <option value="">Selecione a unidade</option>
+                <option value="Unidade de Belo Horizonte">Unidade de Belo Horizonte</option>
+                <option value="Unidade de Contagem">Unidade de Contagem</option>
+                <option value="Unidade de Betim">Unidade de Betim</option>
+                <option value="Unidade de Ibirité">Unidade de Ibirité</option>
+              </select>
+            </div>
+            <br>
+            <div class="col-md-6">
+              <label for="setor">Setor</label>
+              <select class="form-control" id="setor" onchange="atribuirRisco(event)">
+                <option value="">Selecione o setor</option>
+                <option value="Desenvolvimento">Desenvolvimento</option>
+                <option value="Gerência de Desenvolvimento">Gerência de Desenvolvimento</option>
+                <option value="Funilaria">Funilaria</option>
+                <option value="Operacional">Operacional</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <label>
+            Classificação do risco: <span class="text-danger" id="classificao"></span>
+            </label>
+          </div>
+          <div class="d-flex justify-content-center p-3">
+            <button class="col-2 btn enviar bg-purple text-light">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <div class="footer sticky-bottom"></div>
+    <script src="js/examesComplementares.js"></script>
+  </body>
+</html>
