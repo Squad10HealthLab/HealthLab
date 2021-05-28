@@ -103,3 +103,11 @@ nav * {
     width: auto !important;
   }
 }
+
+.bg-purple tr{
+  color: white;
+}
+
+.modal-header {
+  color: white;
+}

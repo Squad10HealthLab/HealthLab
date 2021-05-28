@@ -173,6 +173,67 @@
     </section>
     <div class="footer sticky-bottom"></div>
     <script src="js/funcoes.js"></script>
+    <script type="text/javascript" src="jsonData/fichasClinicas.js"></script>
+    <script>
+        function findId(data, idFicha) {
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id == idFicha) {
+                    return (data[i]);
+                }
+            }
+        }
+        var idFicha = getParameterByName('id');
+        if (idFicha && idFicha > 0) {
+            let ficha = findId(JSON.parse(data), idFicha);
+            if(ficha != null){
+                let nome = document.getElementById('nome');
+                let estadoCivil = document.getElementById('estado-civil');
+                let filhos = document.getElementById('filhos');
+                let sexo = document.getElementById('sexo');
+                let dataNascimento = document.getElementById('data-nacimento');
+                let altura = document.getElementById('altura');
+                let peso = document.getElementById('peso');
+                let doencas = document.getElementById('doencas-cronicas');
+                let ergonomia = document.getElementById('ergonomia');
+                let conservacaoVoz = document.getElementById('conservacao-voz');
+                let doencasOcupacionais = document.getElementById('doencas-ocupacionais');
+
+                nome.value = ficha.nome;
+                estadoCivil.value = ficha.estadoCivil;
+                filhos.value = ficha.filhos;
+                sexo.value = ficha.sexo;
+                dataNascimento.value = ficha.dataNascimento;
+                altura.value = ficha.altura;
+                peso.value = ficha.peso;
+                doencas.value = ficha.doencas;
+                ergonomia.value = ficha.ergonomia;
+                conservacaoVoz.value = ficha.voz;
+                doencasOcupacionais.value = ficha.ocupacionais;
+
+                if(ficha.acidente){
+                    document.getElementById('acidenteTrabalhoSim').click()
+                }
+                else{
+                    document.getElementById('acidenteTrabalhoNao').click()
+                }
+
+                if(ficha.afastamento){
+                    document.getElementById('afastamentoInssSim').click()
+                }
+                else{
+                    document.getElementById('afastamentoInssNao').click()
+                }
+
+                if(ficha.modalidade){
+                    document.getElementById('modalidadeRemoto').click()
+                }
+                else{
+                    document.getElementById('modalidadePresencial').click()
+                }
+
+            }
+        }
+    </script>
 </body>
 
 </html>

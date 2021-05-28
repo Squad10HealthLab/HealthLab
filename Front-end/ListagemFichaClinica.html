@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagens Fichas Clínicas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-purple">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center p-3">
+        <h2>Fichas Clínicas Cadastradas</h2>
+    </div>
+    <section class="p-3 section-formulario shadow rounded">
+        <a class="btn btn-success" style="float: right;" href="FichaClinica.html">Nova Ficha</a>
+        <br>
+        <br>
+        <table class="table" id="tblFichaClinica">
+            <thead class="bg-purple">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+    <div class="footer sticky-bottom"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-purple">
+                    <h5 class="modal-title" id="deleteModalLabel">Exluir Ficha Clínica</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Deseja realmente excluir essa ficha clínica ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="jsonData/fichasClinicas.js"></script>
+    <script type="text/javascript">
+        var fichasClinicas = JSON.parse(data);
+        var table = document.getElementById("tblFichaClinica").getElementsByTagName('tbody')[0];;
+
+        for(let i = 0; i < fichasClinicas.length; i++)
+        {
+            var row = table.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            cell1.innerHTML = fichasClinicas[i].nome;
+            cell2.innerHTML = fichasClinicas[i].dataNascimento;
+            cell3.innerHTML = `              
+                <a class="btn btn-primary" href="FichaClinica.html?id=${fichasClinicas[i].id}"><i class="fa fa-edit"></i></a>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></i></button>`;
+        }
+    </script>
+</body>
+
+</html>
