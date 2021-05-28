@@ -96,3 +96,10 @@ nav * {
     border: 2px solid #592c82;
     color: white;
 }
+
+@media (max-width: 645px) { 
+  .justify-content-center .enviar{
+    flex: 0 0 auto !important;
+    width: auto !important;
+  }
+}
