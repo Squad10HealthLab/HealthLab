@@ -1,4 +1,4 @@
-var input = document.querySelectorAll('.js-date')[0];
+var inputs = document.querySelectorAll('.js-date');
   
 var dateInputMask = function dateInputMask(elm) {
   elm.addEventListener('keypress', function(e) {
@@ -25,8 +25,12 @@ var dateInputMask = function dateInputMask(elm) {
     }
   });
 };
-  
-dateInputMask(input);
+
+for(let i = 0; i < inputs.length; i++)
+{
+  dateInputMask(inputs[i]);
+}
+
 
 
 function somenteNumero(evt) {
@@ -57,6 +61,12 @@ return document.getElementById( el );
 }
 window.onload = function(){
 id('telefone').onkeyup = function(){
+  mascara( this, mtel );
+}
+id('celular').onkeyup = function(){
+  mascara( this, mtel );
+}
+id('celular1').onkeyup = function(){
   mascara( this, mtel );
 }
 }
