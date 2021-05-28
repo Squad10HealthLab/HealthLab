@@ -18,44 +18,14 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-purple">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="AfastamentoInss.html">Afastamento Inss</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="AgendamentosConsultas.html">Agendamento Consultas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesComplementares.html">Exames Complementares</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesMedicos.html">Exames Médicos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="RelatoriosGerenciais.html">Relatórios Gerencias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="FichaClinica.html">Cadastrar Ficha Clínica</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ListagemFichaClinica.html">Fichas Clínicas Cadastradas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesOcupacionais.html">Exames Ocupacionas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="AtestadoSaude.html">Atestado de Saúde Ocupacional</a>
-              </li>
-            </ul>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
         </div>
-      </nav>
+    </nav>
     <div class="d-flex justify-content-center p-3">
         <h2>Exames Ocupacionas Realizados</h2>
     </div>
@@ -67,34 +37,47 @@
             <form role="form">
                 <div class="d-grid justify-content-center  ">
                     <div class="check form-group">
-                        <input type="checkbox" id="admissional" name="admissional">
-                        <label for="admissional">Admissional</label>
+                        <label class="container">Admissional
+                            <input type="checkbox" id="admissional" name="admissional">
+                            <span class="checkmark"></span>
+                          </label>
                     </div>
                     <div class="check form-group">
-                        <input type="checkbox" id="periodico" name="periodico">
-                        <label for="periodico">Periódico</label>
+                        <label class="container">Periódico
+                            <input type="checkbox" id="periodico" name="periodico">
+                            <span class="checkmark"></span>
+                          </label>
                     </div>
                     <div class="check form-group">
-                        <input type="checkbox" id="mudancadefuncao" name="mudancadefuncao">
-                        <label for="mudancadefuncao">Mudança de função</label>
-
+                        <label class="container">Mudança de função
+                            <input type="checkbox" id="mudancadefuncao" name="mudancadefuncao">
+                            <span class="checkmark"></span>
+                          </label>
                     </div>
-                    <div class="check">
-                        <input type="checkbox" id="retornoaotrabalho" name="retornoaotrabalho">
-                        <label for="retornoaotrabalho">Retorno ao trabalho</label>
+                    <div class="check form-group">
+                        <label class="container">Retorno ao trabalho
+                            <input type="checkbox" id="retornoaotrabalho" name="retornoaotrabalho">
+                            <span class="checkmark"></span>
+                          </label>
                     </div>
 
-                    <div class="check">
+                    <div class="check form-group">
+                        <label class="container">Demissional
                         <input type="checkbox" id="demissional" name="demissional">
-                        <label for="demissional">Demissional</label>
+                        <span class="checkmark"></span>
+                          </label>
                     </div>
-                    <div class="check">
+                    <div class="check form-group">
+                        <label class="container">Avaliação ocupacional
                         <input type="checkbox" id="avaliacaoocupacional" name="avaliacaoocupacional">
-                        <label for="avaliacaoocupacional">Avaliação ocupacional</label>
+                        <span class="checkmark"></span>
+                          </label>
                     </div>
-                    <div class="check">
+                    <div class="check form-group">
+                        <label class="container">Avaliação de enquadramento de PCD
                         <input type="checkbox" id="avaliacaodeenquadramentodepcd" name="avaliacaodeenquadramentodepcd">
-                        <label for="avaliacaodeenquadramentodepcd">Avaliação de enquadramento de PCD</label>
+                        <span class="checkmark"></span>
+                          </label>
                     </div>
 
                 </div>
