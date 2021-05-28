@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atestado de Saúde Ocupacional</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-purple">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">LOGO</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="AfastamentoInss.html">Afastamento Inss</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AgendamentosConsultas.html">Agendamento Consultas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ExamesComplementares.html">Exames Complementares</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ExamesMedicos.html">Exames Médicos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="RelatoriosGerenciais.html">Relatórios Gerencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="FichaClinica.html">Cadastrar Ficha Clínica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ListagemFichaClinica.html">Fichas Clínicas Cadastradas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ExamesOcupacionais.html">Exames Ocupacionas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AtestadoSaude.html">Atestado de Saúde Ocupacional</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="d-flex justify-content-center p-3">
+    <h2>Atestado de Saúde Ocupacional</h2>
+  </div>
+  <section class="p-3 section-formulario shadow rounded">
+    <div class="formulario p-4">
+      <form role="form">
+        <div class="row">
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+            <img src="imagens/QRCode_ASO.png" alt="QrCode" style="float:right;width:100px;height:100px;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nome">
+                Nome Completo
+              </label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nome-empresa">
+                Nome da Empresa
+              </label>
+              <input type="text" class="form-control" id="nome-empresa">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="cargo-funcao">
+                Cargo /Função
+              </label>
+              <input type="text" class="form-control" id="cargo-funcao">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="numero-documento">
+                Número do documento de identidade (RG, CPF ou CTPS)
+              </label>
+              <input type="text" class="form-control" id="numero-documento" onkeypress="return somenteNumero(event)">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="tipo-exame">Tipo de exame ocupacional</label>
+            <select class="form-control" id="tipo-exame">
+              <option value="">Selecione</option>
+              <option value="Admissional">Admissional</option>
+              <option value="Periódico">Periódico</option>
+              <option value="Mudança de função">Mudança de função</option>
+              <option value="Retorno ao trabalho">Retorno ao trabalho</option>
+              <option value="Demissional">Demissional</option>
+              <option value="Avaliação ocupacional">Avaliação ocupacional</option>
+              <option value="Avaliação de enquadramento de PCD">Avaliação de enquadramento de PCD</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="data-exame">Data do Exame</label>
+            <input type="text" maxlength="10" class="form-control js-date" id="data-exame">
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="espacamento-label">Definição de apto ou inapto para a
+                função:</label>
+                <br>
+              <div class="radio-toolbar">
+                <input type="radio" id="aptoSim" name="apto" value="Sim">
+                <label for="retornoSim">Sim</label>
+                <input type="radio" id="aptoNao" name="apto" value="Não">
+                <label for="retornoNao">Não</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <label for="riscos">Riscos ocupacionais específicos existentes na atividade desempenhada</label>
+            <div>
+              <textarea id="riscos" class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nome-medico">
+                Nome do Médico Coordenador do PCMSO
+              </label>
+              <input type="text" class="form-control" id="nome-medico">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="crm">
+                CRM do Médico Coordenador do PCMSO
+              </label>
+              <input type="text" class="form-control" id="crm" onkeypress="return somenteNumero(event)">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="exames">Exames realizados, complementares, e data desses exames</label>
+            <input type="file" id="exames" class="form-control" placeholder="Escolher Arquivo">
+          </div>
+          <br>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-3">
+            <hr>
+            <p style="text-align: center;">Assinatura do Empregado</p>
+          </div>
+          <div class="col-md-3">
+            <hr>
+            <p style="text-align: center;">Assinatura do Médico</p>
+          </div>
+          <div class="col-md-3">
+          </div>
+          <br>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center p-3">
+          <button class="col-2 btn enviar bg-purple text-light">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <div class="footer sticky-bottom"></div>
+  <script src="js/funcoes.js"></script>
+</body>
+
+</html>
