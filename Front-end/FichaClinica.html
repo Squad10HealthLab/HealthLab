@@ -18,44 +18,45 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-purple">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="AfastamentoInss.html">Afastamento Inss</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="AgendamentosConsultas.html">Agendamento Consultas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesComplementares.html">Exames Complementares</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesMedicos.html">Exames Médicos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="RelatoriosGerenciais.html">Relatórios Gerencias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="FichaClinica.html">Cadastrar Ficha Clínica</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ListagemFichaClinica.html">Fichas Clínicas Cadastradas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ExamesOcupacionais.html">Exames Ocupacionas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="AtestadoSaude.html">Atestado de Saúde Ocupacional</a>
-              </li>
-            </ul>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="AfastamentoInss.html">Afastamento Inss</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AgendamentosConsultas.html">Agendamento Consultas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExamesComplementares.html">Exames Complementares</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExamesMedicos.html">Exames Médicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="RelatoriosGerenciais.html">Relatórios Gerencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FichaClinica.html">Cadastrar Ficha Clínica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ListagemFichaClinica.html">Fichas Clínicas Cadastradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExamesOcupacionais.html">Exames Ocupacionas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AtestadoSaude.html">Atestado de Saúde Ocupacional</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     <div class="d-flex justify-content-center p-3">
         <h2>Ficha Clínica</h2>
     </div>
@@ -215,7 +216,7 @@
         var idFicha = getParameterByName('id');
         if (idFicha && idFicha > 0) {
             let ficha = findId(JSON.parse(data), idFicha);
-            if(ficha != null){
+            if (ficha != null) {
                 let nome = document.getElementById('nome');
                 let estadoCivil = document.getElementById('estado-civil');
                 let filhos = document.getElementById('filhos');
@@ -240,24 +241,24 @@
                 conservacaoVoz.value = ficha.voz;
                 doencasOcupacionais.value = ficha.ocupacionais;
 
-                if(ficha.acidente){
+                if (ficha.acidente) {
                     document.getElementById('acidenteTrabalhoSim').click()
                 }
-                else{
+                else {
                     document.getElementById('acidenteTrabalhoNao').click()
                 }
 
-                if(ficha.afastamento){
+                if (ficha.afastamento) {
                     document.getElementById('afastamentoInssSim').click()
                 }
-                else{
+                else {
                     document.getElementById('afastamentoInssNao').click()
                 }
 
-                if(ficha.modalidade){
+                if (ficha.modalidade) {
                     document.getElementById('modalidadeRemoto').click()
                 }
-                else{
+                else {
                     document.getElementById('modalidadePresencial').click()
                 }
 
