@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afastamento INSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-purple">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center p-3">
+        <h2>Exames Ocupacionas Realizados</h2>
+    </div>
+    <section class="p-3 section-formulario shadow rounded">
+        <div class="d-flex justify-content-center">
+            <p>Selecione os tipos de exames ocupacionais que ja foram realizados:</p>
+        </div>
+        <div class="formulario p-4">
+            <form role="form">
+                <div class="row justify-content-center  ">
+                    <div class="col-md-3 col-sm-12 check ">
+                        <input type="checkbox" id="admissional" name="admissional">
+                        <label for="admissional">Admissional</label>
+                    </div>
+                    <div class="col-md-3 col-sm-12 check">
+                        <input type="checkbox" id="periodico" name="periodico">
+                        <label for="periodico">Periódico</label>
+                    </div>
+                    <div class="col-md-3 col-sm-12 check">
+                        <input type="checkbox" id="mudancadefuncao" name="mudancadefuncao">
+                        <label for="mudancadefuncao">Mudança de função</label>
+
+                    </div>
+                    <div class="col-md-3 col-sm-12 check ">
+                        <input type="checkbox" id="retornoaotrabalho" name="retornoaotrabalho">
+                        <label for="retornoaotrabalho">Retorno ao trabalho</label>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center  ">
+                    <div class="col-md-4 col-sm-12 check">
+                        <input type="checkbox" id="demissional" name="demissional">
+                        <label for="demissional">Demissional</label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 check">
+                        <input type="checkbox" id="avaliacaoocupacional" name="avaliacaoocupacional">
+                        <label for="avaliacaoocupacional">Avaliação ocupacional</label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 check">
+                        <input type="checkbox" id="avaliacaodeenquadramentodepcd" name="avaliacaodeenquadramentodepcd">
+                        <label for="avaliacaodeenquadramentodepcd">Avaliação de enquadramento de PCD</label>
+                    </div>
+
+                </div>
+                <br>
+                <div class="d-flex justify-content-center p-3">
+                    <button class="col-2 btn enviar bg-purple text-light">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="footer sticky-bottom"></div>
+    <script src="js/funcoes.js"></script>
+</body>
+
+</html>
