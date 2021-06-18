@@ -6,6 +6,8 @@
 
 [Link de Download do vídeo de apresentação](https://github.com/Squad10HealthLab/HealthLab/blob/main/Video-HealthLab.mp4)
 
+[Link de Download do vídeo de apresentação pelo Google Drive](https://drive.google.com/file/d/1BDs9wdwUnFRN1QXcb5v7l3ZHu_zwywK6/view?usp=sharing)
+
 
 | Grupo | 
 | ------ |
